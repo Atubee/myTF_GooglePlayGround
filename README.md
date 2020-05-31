@@ -5,9 +5,10 @@ This is a reproduction of the a Neural Network playground I created for practici
 
 ## Usage
 Enter the following command on your device (Terminal on Linux).
-### python3 Nelder_Mead.py
+### python3 main.py
 
 ## An example of result by demo
+![Result example](result_example.png)
 
 ## My environment
 ---OS---  
