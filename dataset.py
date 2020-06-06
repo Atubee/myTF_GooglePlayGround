@@ -16,6 +16,7 @@ def get_playground_dataset(Dname,
         data = pg.DatasetType.ClassifyXORData
     else:
         print('[E:dataset.py L18] Argument error [Dname]')
+        exit()
     data = pg.generate_data(data, DATA_NOISE)
     data = pg.split_data(data,
                          training_size=TRAINING_DATA_RATIO)
