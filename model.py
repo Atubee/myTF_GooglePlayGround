@@ -6,11 +6,12 @@ def Deep_DenseOnly(input_dim,
                    activate):
     ###########################
     # Building model by keras #
-    ###########################
+    ###########################    
+    if len(wide) != len(activate):
+      print("[E:model.py L12] Sizes of wide and activate is not equal.")
+      exit()
 
     layer_num = len(wide)
-    assert len(wide)==len(activate), "[E:model.py L12] Sizes of wide and activate is not equal."
-
     model = keras.Sequential()
     model.add(keras.layers.Dense(wide[0],
                                  input_shape=(input_dim,),
