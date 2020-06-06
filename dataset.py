@@ -14,6 +14,8 @@ def get_playground_dataset(Dname,
         data = pg.DatasetType.ClassifySpiralData
     elif Dname == "XOR":
         data = pg.DatasetType.ClassifyXORData
+    else:
+        print('[E:dataset.py L18] Argument error [Dname]')
     data = pg.generate_data(data, DATA_NOISE)
     data = pg.split_data(data,
                          training_size=TRAINING_DATA_RATIO)
@@ -35,6 +37,8 @@ def make_features(x1, x2, option):
         data.append(np.sin(x1))
     if option['sin(x2)']:
         data.append(np.sin(x2))
+    if not data:
+        print('[E:dataset.py L39] Argument error [option]')
     data = np.stack(data, -1)
     return data
 
