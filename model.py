@@ -9,7 +9,7 @@ def Deep_DenseOnly(input_dim,
     ###########################
 
     layer_num = len(wide)
-    assert len(wide)==len(activate), "Sizes of wide and activate is not equal."
+    assert len(wide)==len(activate), "[E:model.py L12] Sizes of wide and activate is not equal."
 
     model = keras.Sequential()
     model.add(keras.layers.Dense(wide[0],
@@ -26,8 +26,7 @@ def Deep_DenseOnly(input_dim,
 
 def metric(y_true, y_pred):
     #y_pred = K.map_fn(lambda x: 0 if x<0 else 1, y_pred)
-    return keras.metrics.binary_accuracy(y_true, y_pred, 0.5)
-            
+    return keras.metrics.binary_accuracy(y_true, y_pred, 0.5)      
   
 
         
