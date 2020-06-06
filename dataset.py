@@ -39,6 +39,7 @@ def make_features(x1, x2, option):
         data.append(np.sin(x2))
     if not data:
         print('[E:dataset.py L39] Argument error [option]')
+        exit()
     data = np.stack(data, -1)
     return data
 
