@@ -20,7 +20,7 @@ Enter the following command on your device (Terminal on Linux).
 ---Libraries---  
  * *numpy (== 1.18.2)*  
 
- * *plygdata (== 1.1.0)*  
+ * *playground-data (== 1.1.0)*  
 
  * *matplotlib (== 3.2.1)* 
  
