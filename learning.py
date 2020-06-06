@@ -6,10 +6,13 @@ import numpy as np
 class MainClass(GetData):
     def __init__(self,
                  DataName,
+                 input_features,
                  wide,
                  activate):
-        super().__init__(DataName)
-        self.model = Deep_DenseOnly(2, wide, activate)
+        super().__init__(DataName, input_features)
+        self.model = Deep_DenseOnly(len([v for v in input_features.values() if v==1]),
+                                    wide,
+                                    activate)
         self.train_y = np.where(self.train_y==-1, 0, 1)
         self.test_y = np.where(self.test_y==-1, 0, 1)
     
@@ -33,8 +36,8 @@ class MainClass(GetData):
                                      batch_size=batch_size,
                                      epochs=1)
             
-            if self.evaluate_data is not None:
-                pred = self.model.predict(self.evaluate_data)
+            if self.evaluate_x is not None:
+                pred = self.model.predict(self.evaluate_x)
                 self.pred_draw(pred, i)
         return history
 

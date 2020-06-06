@@ -19,6 +19,8 @@ def Deep_DenseOnly(input_dim,
     for i in range(1, layer_num):
         model.add(keras.layers.Dense(wide[i],
                                      activation=activate[i]))
+    model.add(keras.layers.Dense(1,
+                                 activation='sigmoid'))
     model.summary()
     return model
 
