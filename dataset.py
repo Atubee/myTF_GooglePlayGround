@@ -35,9 +35,7 @@ def make_features(x1, x2, option):
         data.append(np.sin(x1))
     if option['sin(x2)']:
         data.append(np.sin(x2))
-    print(data)
     data = np.stack(data, -1)
-    print(data.shape)
     return data
 
 def plot_setting(x1_min, x1_max, x2_min, x2_max):
