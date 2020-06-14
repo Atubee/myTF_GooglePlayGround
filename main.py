@@ -4,10 +4,10 @@ def main():
     ################################################
     #Select one that you want model to learn from 4 datasets.
     ################################################
-    DATA_NAME = "Circle"
+    #DATA_NAME = "Circle"
     #DATA_NAME = "TwoGauss"
     #DATA_NAME = "Spiral"
-    #DATA_NAME = "XOR"
+    DATA_NAME = "XOR"
     
     ################################################
     #Set HyperParameters.
