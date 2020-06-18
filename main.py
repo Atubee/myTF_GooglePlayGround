@@ -2,7 +2,7 @@ from learning import MainClass
 
 def main():
     ################################################
-    #Select one that you want model to learn from 4 datasets.
+    # Select one that you want model to learn from 4 datasets.
     ################################################
     #DATA_NAME = "Circle"
     #DATA_NAME = "TwoGauss"
@@ -10,13 +10,14 @@ def main():
     DATA_NAME = "XOR"
     
     ################################################
-    #Set HyperParameters.
-    #NN_WIDES     : List contained numbers of nodes used in a layer. THe length means number of layers.
-    #NN_ACTIVATEs : List contained types of activation functions. The length must be equal with NN_WIDES.
-    #FEATURES     : Selection of input features. The "1" means the feature is inputed.
-    #EPOCHs       : Total training epoch
-    #BATCH_SIZE   : Number of inputed training data elements
-    #LEARNING_RATE: The learning rate needed in model training
+    # Set HyperParameters.
+    # NN_WIDES     : List contained numbers of nodes used in a layer. THe length means number of layers.
+    # NN_ACTIVATEs : List contained types of activation functions. The length must be equal with NN_WIDES.
+    #              : Select from 'sigmoid', 'tanh', 'Relu' or 'linear' etc.
+    # FEATURES     : Selection of input features. The "1" means the feature is inputed.
+    # EPOCHs       : Total training epoch
+    # BATCH_SIZE   : Number of inputed training data elements
+    # LEARNING_RATE: The learning rate needed in model training
     ################################################
     NN_WIDEs = [5,5,5]
     NN_ACTIVATEs = ['tanh', 'tanh', 'tanh']
