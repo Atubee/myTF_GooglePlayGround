@@ -1,7 +1,7 @@
 from tensorflow import keras
 from tensorflow.keras import backend as K
 
-def Deep_DenseOnly(input_dim,
+def deep_DenseOnly(input_dim,
                    wide,
                    activate):
     ###########################
