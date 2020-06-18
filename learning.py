@@ -1,5 +1,5 @@
 from dataset import GetData
-from model import Deep_DenseOnly, metric
+from model import deep_DenseOnly, metric
 from tensorflow import keras
 import numpy as np
 
@@ -10,7 +10,7 @@ class MainClass(GetData):
                  wide,
                  activate):
         super().__init__(DataName, input_features)
-        self.model = Deep_DenseOnly(len([v for v in input_features.values() if v==1]),
+        self.model = deep_DenseOnly(len([v for v in input_features.values() if v==1]),
                                     wide,
                                     activate)
         self.train_y = np.where(self.train_y==-1, 0, 1)
